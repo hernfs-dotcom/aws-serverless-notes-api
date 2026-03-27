@@ -20,3 +20,14 @@ The screenshot below shows an initial test failure. This was an important troubl
 The issue was caused by referencing the wrong table name in the Lambda code. After correcting the table name and redeploying the function, the test succeeded and the function was able to store data properly.
 
 ![Lambda Initial Test Failure](failed-function.png)
+## Lambda Function Code Implementation
+
+After identifying and fixing the initial error, I updated the Lambda function to correctly reference the DynamoDB table and handle incoming request data.
+
+The function uses Python along with the `boto3` library to interact with DynamoDB. It parses the incoming JSON request, generates a unique ID for each note using the `uuid` module, and stores the note in the DynamoDB table.
+
+This step was important because it established the core backend logic of the application, allowing the API to dynamically create and store new notes.
+
+The screenshot below shows the Lambda function code after the issue was resolved.
+
+![Lambda Function Code](lambda-function-resolved.png)
