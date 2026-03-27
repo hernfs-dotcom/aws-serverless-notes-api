@@ -33,3 +33,16 @@ This step was important because it built the core backend logic of the applicati
 The screenshot below shows the Lambda function code after the issue was resolved.
 
 ![Lambda Function Code](lambda-function-resolved.png)
+## Lambda Function Successful Test
+
+After updating the Lambda function and fixing the table name issue, I tested the function again to confirm that it was working correctly.
+
+This time, the function executed successfully. This means the Lambda function was able to receive the input data, process it, and communicate with DynamoDB without any errors.
+
+This step was important because it confirmed that the backend logic of the application was fully working before connecting it to API Gateway.
+
+By successfully running this test, I verified that the function could create and store notes in the database as expected.
+
+The screenshot below shows the successful execution of the Lambda function.
+
+![Lambda Success](success-function.png)
