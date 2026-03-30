@@ -129,4 +129,31 @@ It also proves that the data is being permanently stored and can be retrieved at
 The screenshot below shows the notes successfully saved in DynamoDB.
 
 ![DynamoDB Items Returned](items-returned.png)
+## Final Verification in DynamoDB
 
+In this final step, I ran a scan on my DynamoDB table to verify all the data that had been stored throughout the project.
+
+I selected the `frank-notes-api-table` and used the **Scan** operation to retrieve all items. The scan returned multiple records, confirming that each API request successfully created and stored a note in the database.
+
+The results show:
+- Items returned: 6  
+- Items scanned: 6  
+- Efficiency: 100%  
+
+What is happening here is that DynamoDB is reading all the stored data in the table and displaying it. This confirms that every request sent through API Gateway and processed by Lambda was successfully written to the database.
+
+This step is important because it serves as final proof that the entire system is fully working:
+- API Gateway is handling incoming requests  
+- Lambda is processing and creating notes  
+- DynamoDB is storing and returning the data  
+
+What I accomplished in this project:
+- Built a serverless API using API Gateway  
+- Created a Lambda function to process requests  
+- Connected DynamoDB to store application data  
+- Successfully tested the API end to end  
+- Verified that data is stored and retrievable in the database  
+
+This final screenshot represents a complete and working cloud application running entirely on AWS services.
+
+![Final DynamoDB Scan](final-run.png)
