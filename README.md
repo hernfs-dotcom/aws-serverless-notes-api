@@ -110,5 +110,22 @@ This step confirmed that the entire system is fully working:
 - DynamoDB stores the data  
 
 The screenshot below shows the successful API request and response.
+## Verifying the Saved Notes in DynamoDB
 
+After successfully testing the API in ReqBin, I checked the DynamoDB table to confirm that the notes were actually being stored.
+
+In this step, I opened the `frank-notes-api-table` and viewed the items returned. The table shows multiple notes that were created from my API requests, including entries like **Live API Note** and **My first note**. Each record has a unique `id`, along with its `title` and `content`.
+
+What is happening here is that DynamoDB is displaying all the items that were successfully written by the Lambda function. Every time a request was sent through API Gateway, the Lambda function processed the data and inserted a new item into this table.
+
+This step is important because it confirms that the entire backend system is working correctly from start to finish:
+- API Gateway receives the request  
+- Lambda processes the data  
+- DynamoDB stores the note  
+
+It also proves that the data is being permanently stored and can be retrieved at any time.
+
+The screenshot below shows the notes successfully saved in DynamoDB.
+
+![DynamoDB Items Returned](items-returned.png)
 ![Successful API Test](note-success.png)
