@@ -110,6 +110,7 @@ This step confirmed that the entire system is fully working:
 - DynamoDB stores the data  
 
 The screenshot below shows the successful API request and response.
+note-success.png
 ## Verifying the Saved Notes in DynamoDB
 
 After successfully testing the API in ReqBin, I checked the DynamoDB table to confirm that the notes were actually being stored.
