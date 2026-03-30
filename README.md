@@ -59,3 +59,27 @@ This step was a key part of the project because it transformed the Lambda functi
 The screenshot below shows the `POST /notes` route successfully created and configured in API Gateway.
 
 ![API Gateway POST Route](api-gateway-post-notes.png)
+## Testing the API with ReqBin
+
+After setting up the API Gateway route, I tested the live API using ReqBin to verify that everything was working correctly from end to end.
+
+In this step, I sent a `POST` request to my API Gateway URL and included a JSON body with sample data:
+
+{
+  "title": "Live API Note",
+  "content": "This came from API Gateway"
+}
+
+The purpose of this test was to simulate a real user sending data to the API and confirm that the request would reach the Lambda function and store the note in DynamoDB.
+
+However, the response returned a **404 Not Found** error. This occurred because the request was sent to the base API URL instead of the full route.
+
+The correct endpoint should include `/notes` at the end of the URL, like this:
+
+https://g7sjur2vvc.execute-api.us-east-1.amazonaws.com/notes
+
+This step was important because it showed that even if the backend is working, the API will fail if the route path is not included correctly.
+
+The screenshot below shows the request being sent in ReqBin and the 404 error response.
+
+![API Test 404 Error](404-not-found.png)
