@@ -46,3 +46,16 @@ By successfully running this test, I verified that the function could create and
 The screenshot below shows the successful execution of the Lambda function.
 
 ![Lambda Success](success-function.png)
+## Creating the API Gateway Route
+
+After confirming that my Lambda function was working correctly, I moved to API Gateway to create a route that allows users to interact with the application.
+
+In this step, I created a `POST /notes` route. This route is used to send data (a note) to the backend. When a request is made to this endpoint, API Gateway forwards the request to the Lambda function I previously built.
+
+I also ensured that the route was properly connected to the Lambda integration. This connection is important because it allows the API to trigger the Lambda function whenever a request is received.
+
+This step was a key part of the project because it transformed the Lambda function into a real, usable API that can accept external requests.
+
+The screenshot below shows the `POST /notes` route successfully created and configured in API Gateway.
+
+![API Gateway POST Route](api-gateway-post-notes.png)
