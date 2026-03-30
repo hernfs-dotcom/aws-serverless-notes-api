@@ -128,4 +128,4 @@ It also proves that the data is being permanently stored and can be retrieved at
 The screenshot below shows the notes successfully saved in DynamoDB.
 
 ![DynamoDB Items Returned](items-returned.png)
-![Successful API Test](note-success.png)
+
